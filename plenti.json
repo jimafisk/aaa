@@ -3,7 +3,7 @@
 		"pages": ":filename",
 		"index": ":paginate(totalPages)"
 	},
-	"baseurl": "/",
+	"baseurl": "/aaa/",
 	"build": "public",
 	"local": {
 		"port": 3000
