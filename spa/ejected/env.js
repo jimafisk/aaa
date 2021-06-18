@@ -1,1 +1,1 @@
-export let env = { local: false, baseurl: '/aaa/'};
+export let env = { local: false, baseurl: '/'};
