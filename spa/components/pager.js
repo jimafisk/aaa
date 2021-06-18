@@ -137,10 +137,10 @@ function create_if_block_3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "href", "/");
+			attr(a0, "href", ".");
 			attr(a0, "class", "svelte-1tphcia");
 			attr(li0, "class", "svelte-1tphcia");
-			attr(a1, "href", a1_href_value = "/" + (/*currentPage*/ ctx[0] - 1));
+			attr(a1, "href", a1_href_value = /*currentPage*/ ctx[0] - 1);
 			attr(a1, "class", "svelte-1tphcia");
 			attr(li1, "class", "svelte-1tphcia");
 		},
@@ -154,7 +154,7 @@ function create_if_block_3(ctx) {
 			append(a1, t2);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*currentPage*/ 1 && a1_href_value !== (a1_href_value = "/" + (/*currentPage*/ ctx[0] - 1))) {
+			if (dirty & /*currentPage*/ 1 && a1_href_value !== (a1_href_value = /*currentPage*/ ctx[0] - 1)) {
 				attr(a1, "href", a1_href_value);
 			}
 		},
@@ -192,7 +192,7 @@ function create_if_block_2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = "/" + (/*currentPage*/ ctx[0] - /*i*/ ctx[4]));
+			attr(a, "href", a_href_value = /*currentPage*/ ctx[0] - /*i*/ ctx[4]);
 			attr(a, "class", "svelte-1tphcia");
 			attr(li, "class", "svelte-1tphcia");
 		},
@@ -204,7 +204,7 @@ function create_if_block_2(ctx) {
 		p(ctx, dirty) {
 			if (dirty & /*currentPage*/ 1 && t_value !== (t_value = /*currentPage*/ ctx[0] - /*i*/ ctx[4] + "")) set_data(t, t_value);
 
-			if (dirty & /*currentPage*/ 1 && a_href_value !== (a_href_value = "/" + (/*currentPage*/ ctx[0] - /*i*/ ctx[4]))) {
+			if (dirty & /*currentPage*/ 1 && a_href_value !== (a_href_value = /*currentPage*/ ctx[0] - /*i*/ ctx[4])) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -279,7 +279,7 @@ function create_if_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = "/" + (/*currentPage*/ ctx[0] + (/*i*/ ctx[4] + 1)));
+			attr(a, "href", a_href_value = /*currentPage*/ ctx[0] + (/*i*/ ctx[4] + 1));
 			attr(a, "class", "svelte-1tphcia");
 			attr(li, "class", "svelte-1tphcia");
 		},
@@ -291,7 +291,7 @@ function create_if_block_1(ctx) {
 		p(ctx, dirty) {
 			if (dirty & /*currentPage*/ 1 && t_value !== (t_value = /*currentPage*/ ctx[0] + (/*i*/ ctx[4] + 1) + "")) set_data(t, t_value);
 
-			if (dirty & /*currentPage*/ 1 && a_href_value !== (a_href_value = "/" + (/*currentPage*/ ctx[0] + (/*i*/ ctx[4] + 1)))) {
+			if (dirty & /*currentPage*/ 1 && a_href_value !== (a_href_value = /*currentPage*/ ctx[0] + (/*i*/ ctx[4] + 1))) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -413,7 +413,6 @@ function create_if_block(ctx) {
 	let li1;
 	let a1;
 	let t2;
-	let a1_href_value;
 
 	return {
 		c() {
@@ -445,10 +444,10 @@ function create_if_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "href", a0_href_value = "/" + (/*currentPage*/ ctx[0] + 1));
+			attr(a0, "href", a0_href_value = /*currentPage*/ ctx[0] + 1);
 			attr(a0, "class", "svelte-1tphcia");
 			attr(li0, "class", "svelte-1tphcia");
-			attr(a1, "href", a1_href_value = "/" + /*totalPages*/ ctx[1]);
+			attr(a1, "href", /*totalPages*/ ctx[1]);
 			attr(a1, "class", "svelte-1tphcia");
 			attr(li1, "class", "svelte-1tphcia");
 		},
@@ -462,12 +461,12 @@ function create_if_block(ctx) {
 			append(a1, t2);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*currentPage*/ 1 && a0_href_value !== (a0_href_value = "/" + (/*currentPage*/ ctx[0] + 1))) {
+			if (dirty & /*currentPage*/ 1 && a0_href_value !== (a0_href_value = /*currentPage*/ ctx[0] + 1)) {
 				attr(a0, "href", a0_href_value);
 			}
 
-			if (dirty & /*totalPages*/ 2 && a1_href_value !== (a1_href_value = "/" + /*totalPages*/ ctx[1])) {
-				attr(a1, "href", a1_href_value);
+			if (dirty & /*totalPages*/ 2) {
+				attr(a1, "href", /*totalPages*/ ctx[1]);
 			}
 		},
 		d(detaching) {

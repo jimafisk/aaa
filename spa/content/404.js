@@ -46,7 +46,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", "/");
+			attr(a, "href", ".");
 		},
 		m(target, anchor) {
 			insert(target, h1, anchor);
